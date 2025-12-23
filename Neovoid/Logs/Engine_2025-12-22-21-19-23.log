@@ -1,0 +1,26 @@
+[21:19:23] [INFO] Creating Window -> Neovoid [1280, 720]
+[21:19:23] [INFO] Created Window -> 0x7d04e6
+[21:19:23] [INFO] Created Device -> 0x7ff6a84e6000
+[21:19:23] [INFO] Created Swap Chain -> 0x7ff6a84e5ff8
+[21:19:23] [INFO] Created Device Context -> 0x7ff6a84e5ff0
+[21:19:23] [INFO] Found Back Buffer -> 0xb34c97eb88
+[21:19:23] [INFO] Created Render Target View -> 0x7ff6a84e6018
+[21:19:23] [INFO] Created Depth Stencil State -> 0x7ff6a84e6020
+[21:19:23] [INFO] Created Depth Stencil View -> 0x7ff6a84e6008
+[21:19:23] [INFO] Created Rasterizer State -> 0x7ff6a84e6010
+[21:19:23] [INFO] Created Blend State -> 0x7ff6a84e6028
+[21:19:23] [INFO] DirectX 11 initialized successfully
+[21:19:24] [DEBUG] Camera Position: [0, 0, -5]
+[21:19:24] [DEBUG] Camera Position: [0, 0, -5]
+[21:19:24] [DEBUG] Camera Position: [0, 0, -5]
+[21:19:25] [DEBUG] Camera Position: [0, 0, -5]
+[21:19:25] [DEBUG] Camera Position: [0, 0, -5.3334727]
+[21:19:25] [DEBUG] Camera Position: [0, 0, -5.6664634]
+[21:19:26] [DEBUG] Camera Position: [0, 0, -5.900024]
+[21:19:26] [DEBUG] Camera Position: [0, 0, -5.644609]
+[21:19:26] [DEBUG] Camera Position: [0, 0, -5.3109303]
+[21:19:27] [DEBUG] Camera Position: [0.2878553, 0, -5.3109303]
+[21:19:27] [DEBUG] Camera Position: [0.2655505, 0, -5.3109303]
+[21:19:27] [DEBUG] Camera Position: [0.109982885, 0, -5.3109303]
+[21:19:28] [DEBUG] Camera Position: [0.1379971, 0, -5.3109303]
+[21:19:28] [DEBUG] Camera Position: [0.0156402, 0, -5.3109303]

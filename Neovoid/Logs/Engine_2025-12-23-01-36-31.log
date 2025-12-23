@@ -1,0 +1,13 @@
+[01:36:31] [INFO] Creating Window -> Neovoid [1280, 720]
+[01:36:32] [INFO] Created Window -> 0x14c0db8
+[01:36:32] [INFO] Created Device -> 0x7ff7bf37efc0
+[01:36:32] [INFO] Created Swap Chain -> 0x7ff7bf37efb8
+[01:36:32] [INFO] Created Device Context -> 0x7ff7bf37efb0
+[01:36:32] [INFO] Found Back Buffer -> 0x98be0ff038
+[01:36:32] [INFO] Created Render Target View -> 0x7ff7bf37efd8
+[01:36:32] [INFO] Created Depth Stencil State -> 0x7ff7bf37efe0
+[01:36:32] [INFO] Created Depth Stencil View -> 0x7ff7bf37efc8
+[01:36:32] [INFO] Created Rasterizer State -> 0x7ff7bf37efd0
+[01:36:32] [INFO] Created Blend State -> 0x7ff7bf37efe8
+[01:36:32] [INFO] DirectX 11 initialized successfully
+[01:36:32] [ERROR] Failed to load vertex shader bytecode

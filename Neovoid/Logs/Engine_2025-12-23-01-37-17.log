@@ -1,0 +1,12 @@
+[01:37:17] [INFO] Creating Window -> Neovoid [1280, 720]
+[01:37:17] [INFO] Created Window -> 0x14d10436
+[01:37:17] [INFO] Created Device -> 0x7ff7bf37efc0
+[01:37:17] [INFO] Created Swap Chain -> 0x7ff7bf37efb8
+[01:37:17] [INFO] Created Device Context -> 0x7ff7bf37efb0
+[01:37:17] [INFO] Found Back Buffer -> 0x76af4fef08
+[01:37:17] [INFO] Created Render Target View -> 0x7ff7bf37efd8
+[01:37:17] [INFO] Created Depth Stencil State -> 0x7ff7bf37efe0
+[01:37:17] [INFO] Created Depth Stencil View -> 0x7ff7bf37efc8
+[01:37:17] [INFO] Created Rasterizer State -> 0x7ff7bf37efd0
+[01:37:17] [INFO] Created Blend State -> 0x7ff7bf37efe8
+[01:37:17] [INFO] DirectX 11 initialized successfully

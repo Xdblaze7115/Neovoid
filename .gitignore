@@ -1,0 +1,9 @@
+# Project specific files
+.git/
+.vs/
+*.sln
+**/Build/
+
+# NuGet packages
+packages/
+.nuget/
