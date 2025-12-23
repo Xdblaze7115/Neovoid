@@ -1,7 +1,8 @@
 # Project specific files
+*.sln
+*.imgui.ini
 .git/
 .vs/
-*.sln
 **/Build/
 **/Logs/
 
