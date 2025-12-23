@@ -3,6 +3,7 @@
 .vs/
 *.sln
 **/Build/
+**/Logs/
 
 # NuGet packages
 packages/
