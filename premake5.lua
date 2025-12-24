@@ -10,6 +10,7 @@ output_directory = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 include_directory = {}
 include_directory["magic_enum"] = "Neovoid/Vendor/magic_enum/include"
+include_directory["assimp"] = "Neovoid/Vendor/assimp/include"
 include_directory["glm"] = "Neovoid/Vendor/glm"
 include_directory["Imgui"] = "Neovoid/Vendor/Imgui"
 include_directory["GLFW"] = "Neovoid/Vendor/GLFW/include"
@@ -30,9 +31,12 @@ project "Neovoid"
 	objdir ("Build/" .. output_directory .. "/%{prj.name}/Intermediates")
 
 	files {
+        "%{prj.name}/Resources/**",
 		"%{prj.name}/Source/**.h",
 		"%{prj.name}/Source/**.hpp",
 		"%{prj.name}/Source/**.cpp",
+		"%{prj.name}/Source/**.hlsl",
+		"%{prj.name}/Vendor/assimp/include/**",
 		"%{prj.name}/Vendor/magic_enum/include/**.hpp",
 		"%{prj.name}/Vendor/glm/glm/**.h",
 		"%{prj.name}/Vendor/glm/glm/**.hpp",
@@ -45,6 +49,7 @@ project "Neovoid"
 		"%{prj.name}/Source",
 		"%{prj.name}/Vendor",
 		"%{include_directory.magic_enum}",
+		"%{include_directory.assimp}",
 		"%{include_directory.glm}",
 		"%{include_directory.Imgui}",
 		"%{include_directory.GLFW}",
@@ -57,6 +62,7 @@ project "Neovoid"
         "d3d11",
         "dxgi",
         "d3dcompiler",
+        "DirectXTex",
 		"Imgui",
 		"GLFW",
 		"Glad",

@@ -1,23 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{000BCD17-6C75-818E-B5B3-3234215D5FE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Meshes">
+      <UniqueIdentifier>{348D4560-2086-64B2-49B8-4937351044BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Textures">
+      <UniqueIdentifier>{D33C360A-BF20-F75F-2881-F1B21484E1E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{56EB95D1-428D-C0A7-2B48-D4FB178947F8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\AssetManager">
+      <UniqueIdentifier>{A06B44A6-0CCD-21B4-953A-6866019B5873}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Backend">
       <UniqueIdentifier>{0DE83816-F9B5-2C1C-E249-9D42CEB60881}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Direct3D">
-      <UniqueIdentifier>{97423B40-03CE-A804-0CDF-2BF978E90405}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Direct3D\Bindables">
-      <UniqueIdentifier>{AA9B4747-165E-7BD1-5F0E-0A5ECB0F54AF}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Direct3D\Drawable">
-      <UniqueIdentifier>{481EEA24-3443-39A5-5D8E-1E35491238C3}</UniqueIdentifier>
+    <Filter Include="Source\Camera">
+      <UniqueIdentifier>{0EA3D029-7A63-4C60-439E-95DDAF1D913C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Events">
       <UniqueIdentifier>{7ABAF22F-E67A-6E66-AFB5-B7E31B35B342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Game">
+      <UniqueIdentifier>{BF8A170F-2B40-9004-B434-8ADB20E98608}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Imgui">
       <UniqueIdentifier>{209133F2-0CF4-C296-B579-FB4CA1BB8E19}</UniqueIdentifier>
@@ -34,14 +43,47 @@
     <Filter Include="Source\Platform\Windows">
       <UniqueIdentifier>{A4BC056E-10F4-4D05-19FE-B12885B474FE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Player">
+      <UniqueIdentifier>{B27FE448-1E40-607F-E77A-A9FC53FAA45B}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source\Renderer">
       <UniqueIdentifier>{BC4F86EE-28DB-F3B2-31EC-76A79DF64FB3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Renderer\Bindables">
+      <UniqueIdentifier>{0F1BED8A-7BDD-2015-C48D-AFA1308FF9F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Renderer\Drawable">
+      <UniqueIdentifier>{0DC57A36-F9E9-C9B6-2235-AF460EB9C8D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Viewport">
+      <UniqueIdentifier>{45F7D5BF-B182-4384-BA93-C678269E9F84}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Window">
       <UniqueIdentifier>{7D1B0959-E9DB-848F-B216-CE0C1E96C96B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\World">
+      <UniqueIdentifier>{8D2E32F3-7991-C197-2217-FA4D0E598D1A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Vendor">
       <UniqueIdentifier>{935FDCD7-7F01-07AE-68BC-1A0254FD8DFE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\assimp">
+      <UniqueIdentifier>{4F27C00C-BBE7-3B43-8422-85C0F0A1801F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\assimp\include">
+      <UniqueIdentifier>{C22DEBAE-2E9A-A6A9-F78D-3E0763B9C811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\assimp\include\assimp">
+      <UniqueIdentifier>{9E4A7101-8A05-61AD-33BD-D9F71F57AB3D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\assimp\include\assimp\Compiler">
+      <UniqueIdentifier>{C85B065C-3420-054C-FD85-35166909A181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\assimp\include\assimp\port">
+      <UniqueIdentifier>{D26EF0A1-3EDD-4521-87C6-0021F3733BBD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\assimp\include\assimp\port\AndroidJNI">
+      <UniqueIdentifier>{E3F19571-CF04-96CA-78EE-72B764E03218}</UniqueIdentifier>
     </Filter>
     <Filter Include="Vendor\glm">
       <UniqueIdentifier>{627B7327-4E33-B574-B73A-8ED0A3115065}</UniqueIdentifier>
@@ -72,8 +114,23 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\AssetManager\AssetManager.hpp">
+      <Filter>Source\AssetManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AssetManager\Mesh.hpp">
+      <Filter>Source\AssetManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AssetManager\TextureResource.hpp">
+      <Filter>Source\AssetManager</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Backend\Backend.hpp">
       <Filter>Source\Backend</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera\Camera.hpp">
+      <Filter>Source\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera\Frustum.hpp">
+      <Filter>Source\Camera</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core.hpp">
       <Filter>Source</Filter>
@@ -89,6 +146,9 @@
     </ClInclude>
     <ClInclude Include="Source\Events\MouseEvent.hpp">
       <Filter>Source\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Game.hpp">
+      <Filter>Source\Game</Filter>
     </ClInclude>
     <ClInclude Include="Source\Imgui\Imgui.hpp">
       <Filter>Source\Imgui</Filter>
@@ -108,17 +168,326 @@
     <ClInclude Include="Source\Platform\Windows\WindowsInput.hpp">
       <Filter>Source\Platform\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Player\Player.hpp">
+      <Filter>Source\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindables\Bindable.hpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindables\Buffer.hpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindables\ConstantBuffer.hpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindables\InputLayout.hpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindables\Shader.hpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindables\Texture.hpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Bindables\Topology.hpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\Drawable\Drawable.hpp">
+      <Filter>Source\Renderer\Drawable</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Renderer\Renderer.hpp">
       <Filter>Source\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="Source\Renderer\RendererContext.hpp">
       <Filter>Source\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Viewport\Viewport.hpp">
+      <Filter>Source\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Viewport\ViewportManager.hpp">
+      <Filter>Source\Viewport</Filter>
+    </ClInclude>
     <ClInclude Include="Source\VoidTypes.hpp">
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Source\Window\Window.hpp">
       <Filter>Source\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Window\WindowInput.hpp">
+      <Filter>Source\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\World\World.hpp">
+      <Filter>Source\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\AssertHandler.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Base64.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\BaseImporter.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Bitmap.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\BlobIOSystem.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\ByteSwapper.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\ColladaMetaData.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Compiler\poppack1.h">
+      <Filter>Vendor\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Compiler\pstdint.h">
+      <Filter>Vendor\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Compiler\pushpack1.h">
+      <Filter>Vendor\assimp\include\assimp\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\CreateAnimMesh.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\DefaultIOStream.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\DefaultIOSystem.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\DefaultLogger.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Exceptional.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Exporter.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\GenericProperty.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\GltfMaterial.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Hash.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\IOStream.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\IOStreamBuffer.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\IOSystem.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Importer.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\LineSplitter.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\LogAux.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\LogStream.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Logger.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\MathFunctions.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\MemoryIOWrapper.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\NullLogger.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\ObjMaterial.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\ParsingUtils.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Profiler.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\ProgressHandler.hpp">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\RemoveComments.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\SGSpatialSort.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\SceneCombiner.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\SkeletonMeshBuilder.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\SmallVector.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\SmoothingGroups.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\SmoothingGroups.inl">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\SpatialSort.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\StandardShapes.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\StreamReader.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\StreamWriter.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\StringComparison.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\StringUtils.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Subdivision.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\TinyFormatter.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\Vertex.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\XMLTools.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\XmlParser.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\ZipArchiveIOSystem.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\aabb.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\ai_assert.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\anim.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\camera.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\cexport.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\cfileio.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\cimport.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\color4.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\color4.inl">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\commonMetaData.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\defs.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\fast_atof.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\importerdesc.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\light.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\material.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\material.inl">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\matrix3x3.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\matrix3x3.inl">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\matrix4x4.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\matrix4x4.inl">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\mesh.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\metadata.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\pbrmaterial.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\port\AndroidJNI\AndroidJNIIOSystem.h">
+      <Filter>Vendor\assimp\include\assimp\port\AndroidJNI</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\port\AndroidJNI\BundledAssetIOSystem.h">
+      <Filter>Vendor\assimp\include\assimp\port\AndroidJNI</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\postprocess.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\qnan.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\quaternion.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\quaternion.inl">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\scene.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\texture.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\types.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\vector2.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\vector2.inl">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\vector3.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\vector3.inl">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\assimp\include\assimp\version.h">
+      <Filter>Vendor\assimp\include\assimp</Filter>
     </ClInclude>
     <ClInclude Include="Vendor\glm\glm\common.hpp">
       <Filter>Vendor\glm\glm</Filter>
@@ -1428,26 +1797,30 @@
     <ClInclude Include="Vendor\magic_enum\include\magic_enum_utility.hpp">
       <Filter>Vendor\magic_enum\include</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Camera\Camera.hpp" />
-    <ClInclude Include="Source\Camera\Frustum.hpp" />
-    <ClInclude Include="Source\Game\Game.hpp" />
-    <ClInclude Include="Source\Viewport\Viewport.hpp" />
-    <ClInclude Include="Source\Viewport\ViewportManager.hpp" />
-    <ClInclude Include="Source\World\World.hpp" />
-    <ClInclude Include="Source\Player\Player.hpp" />
-    <ClInclude Include="Source\Renderer\Bindables\Bindable.hpp" />
-    <ClInclude Include="Source\Renderer\Bindables\Buffer.hpp" />
-    <ClInclude Include="Source\Renderer\Bindables\InputLayout.hpp" />
-    <ClInclude Include="Source\Renderer\Bindables\Shader.hpp" />
-    <ClInclude Include="Source\Renderer\Bindables\Topology.hpp" />
-    <ClInclude Include="Source\Renderer\Drawable\Drawable.hpp" />
-    <ClInclude Include="Source\Renderer\Bindables\Texture.hpp" />
-    <ClInclude Include="Source\Window\WindowInput.hpp" />
-    <ClInclude Include="Source\Renderer\Bindables\ConstantBuffer.hpp" />
+    <ClInclude Include="Source\Math\Vertex.hpp" />
+    <ClInclude Include="Vendor\assimp\include\assimp\config.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\AssetManager\AssetManager.cpp">
+      <Filter>Source\AssetManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AssetManager\Mesh.cpp">
+      <Filter>Source\AssetManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AssetManager\TextureResource.cpp">
+      <Filter>Source\AssetManager</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Backend\Backend.cpp">
       <Filter>Source\Backend</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera\Camera.cpp">
+      <Filter>Source\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera\Frustum.cpp">
+      <Filter>Source\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Game.cpp">
+      <Filter>Source\Game</Filter>
     </ClCompile>
     <ClCompile Include="Source\Imgui\Imgui.cpp">
       <Filter>Source\Imgui</Filter>
@@ -1467,14 +1840,47 @@
     <ClCompile Include="Source\Platform\Windows\WindowsInput.cpp">
       <Filter>Source\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Player\Player.cpp">
+      <Filter>Source\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindables\Buffer.cpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindables\InputLayout.cpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindables\Shader.cpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindables\Texture.cpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Bindables\Topology.cpp">
+      <Filter>Source\Renderer\Bindables</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\Drawable\Drawable.cpp">
+      <Filter>Source\Renderer\Drawable</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Renderer\Renderer.cpp">
       <Filter>Source\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="Source\Renderer\RendererContext.cpp">
       <Filter>Source\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Viewport\Viewport.cpp">
+      <Filter>Source\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Viewport\ViewportManager.cpp">
+      <Filter>Source\Viewport</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Window\Window.cpp">
       <Filter>Source\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Window\WindowInput.cpp">
+      <Filter>Source\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\World\World.cpp">
+      <Filter>Source\World</Filter>
     </ClCompile>
     <ClCompile Include="Vendor\glm\glm\detail\glm.cpp">
       <Filter>Vendor\glm\glm\detail</Filter>
@@ -1482,22 +1888,32 @@
     <ClCompile Include="Vendor\glm\glm\glm.cppm">
       <Filter>Vendor\glm\glm</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Camera\Camera.cpp" />
-    <ClCompile Include="Source\Camera\Frustum.cpp" />
-    <ClCompile Include="Source\Game\Game.cpp" />
-    <ClCompile Include="Source\Viewport\Viewport.cpp" />
-    <ClCompile Include="Source\Viewport\ViewportManager.cpp" />
-    <ClCompile Include="Source\World\World.cpp" />
-    <ClCompile Include="Source\Player\Player.cpp" />
-    <ClCompile Include="Source\Renderer\Bindables\Buffer.cpp" />
-    <ClCompile Include="Source\Renderer\Bindables\InputLayout.cpp" />
-    <ClCompile Include="Source\Renderer\Bindables\Shader.cpp" />
-    <ClCompile Include="Source\Renderer\Bindables\Topology.cpp" />
-    <ClCompile Include="Source\Renderer\Drawable\Drawable.cpp" />
-    <ClCompile Include="Source\Window\WindowInput.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Source\Shaders\VertexShader.hlsl" />
+    <None Include="Resources\Meshes\teapot.obj">
+      <Filter>Resources\Meshes</Filter>
+    </None>
+    <None Include="Vendor\assimp\include\assimp\config.h.in">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </None>
+    <None Include="Vendor\assimp\include\assimp\module.modulemap">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </None>
+    <None Include="Vendor\assimp\include\assimp\revision.h.in">
+      <Filter>Vendor\assimp\include\assimp</Filter>
+    </None>
+    <None Include="Vendor\assimp\lib\assimp-vc143-mt.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Textures\wood.jpg">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
     <FxCompile Include="Source\Shaders\PixelShader.hlsl" />
+    <FxCompile Include="Source\Shaders\VertexShader.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Vendor\assimp\lib\assimp-vc143-mt.lib" />
   </ItemGroup>
 </Project>

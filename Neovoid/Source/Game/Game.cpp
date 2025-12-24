@@ -3,7 +3,6 @@
 #include "VoidTypes.hpp"
 #include "Logging/Logging.hpp"
 #include "World/World.hpp"
-#include "Player/Player.hpp"
 
 namespace Game {
 	float m_time_wrap = 10000.0f;
@@ -13,20 +12,13 @@ namespace Game {
 	float m_delta_accumulator = 0.0f;
 
 	GameState m_GameState = GameState::None;
-	std::vector<Player> m_LocalPlayers;
-
-	void AddLocalPlayer() {
-		Player& player = m_LocalPlayers.emplace_back();
-	}
+	Player m_LocalPlayer;
 
 	void Initialize() {
 		m_GameState = GameState::World;
-		AddLocalPlayer();
+		m_LocalPlayer = Player();
 
-		for (auto& player : m_LocalPlayers) {
-			player.Initialize();
-		}
-
+		m_LocalPlayer.Initialize();
 		World::Initialize();
 	}
 
@@ -53,15 +45,16 @@ namespace Game {
 			m_total_time -= m_time_wrap;
 		}
 
-		for (auto& player : m_LocalPlayers) {
-			player.Update(m_delta_time);
-		}
-
+		m_LocalPlayer.Update(m_delta_time);
 		World::Update(m_delta_time);
 
 		while (m_delta_accumulator >= m_fixed_delta_time) {
 			// Physics::StepPhysics(fixed_delta_time);
 			m_delta_accumulator -= m_fixed_delta_time;
 		}
+	}
+
+	Player* GetLocalPlayer() {
+		return &m_LocalPlayer;
 	}
 }

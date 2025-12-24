@@ -202,7 +202,7 @@ namespace RendererContext {
 
 		float color[4] = { r, g, b, a };
 		m_DeviceContext->ClearRenderTargetView(m_RenderTargetView.Get(), color);
-		m_DeviceContext->ClearDepthStencilView(m_DepthStencilView.Get(), D3D11_CLEAR_DEPTH, 1.0f, 0u);
+		m_DeviceContext->ClearDepthStencilView(m_DepthStencilView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0u);
 
 		float blendFactor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
 		m_DeviceContext->OMSetRenderTargets(1u, m_RenderTargetView.GetAddressOf(), m_DepthStencilView.Get());
