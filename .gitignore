@@ -1,9 +1,9 @@
 # Project specific files
 *.gitignore
-*.sln
 *.imgui.ini
 .git/
 .vs/
+**vcpkg_installed/
 **/Build/
 **/Logs/
 

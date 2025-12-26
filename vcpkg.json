@@ -1,0 +1,8 @@
+{
+    "name": "vcpkg-neovoid",
+    "version-string": "master",
+    "dependencies": [
+	"directxtex"
+    ],
+    "builtin-baseline": "d56a38a1f935f36e3033b6506123f96fc72979e7"
+}
