@@ -1,6 +1,6 @@
 #pragma once
-#include "Mesh.hpp"
-#include "TextureResource.hpp"
+#include "Nodes/Mesh/Mesh.hpp"
+#include "Nodes/Texture/TextureResource.hpp"
 
 namespace AssetManager {
 	void Initialize();

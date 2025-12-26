@@ -21,7 +21,13 @@ Viewport::Viewport(int viewport_index, Vector2 positon, Vector2 size) {
 }
 
 void Viewport::Update() {
+	Viewport_Frame.TopLeftX = Position.X;
+	Viewport_Frame.TopLeftY = Position.Y;
+	Viewport_Frame.Width = Size.X;
+	Viewport_Frame.Height = Size.Y;
+
 	Aspect_Ratio = Size.X / Size.Y;
+
 	Orthographic_Width = Orthographic_Height * Aspect_Ratio;
 	Perspective_Matrix = XMMatrixPerspectiveFovLH(Fov, Aspect_Ratio, Near_Plane, Far_Plane);
 	Orthographic_Matrix = XMMatrixOrthographicLH(Orthographic_Width, Orthographic_Height, Near_Plane, Far_Plane);

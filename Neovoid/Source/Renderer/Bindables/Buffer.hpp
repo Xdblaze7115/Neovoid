@@ -35,7 +35,7 @@ private:
 	UINT m_Count;
 	Microsoft::WRL::ComPtr<ID3D11Buffer> m_IndexBuffer;
 public:
-	IndexBuffer(std::vector<uint32_t>& indices);
+	IndexBuffer(std::vector<unsigned int>& indices);
 
 	void Bind() noexcept override;
 	void Unbind() noexcept override;

@@ -145,7 +145,7 @@ namespace Win32Window {
 
 	void Initialize(const WindowProps& props) {
 		m_Props = props;
-		NEOLOG_INFO("Creating Window -> {} [{}, {}]", m_Props.Title.c_str(), m_Props.Size.X, m_Props.Size.Y);
+		NEOLOG_INFO("Creating Window -> %s [%.f, %.f]", m_Props.Title.c_str(), m_Props.Size.X, m_Props.Size.Y);
 
 		// Initialize Com and create a window
 		if (!s_Com_Initialized) {
@@ -201,7 +201,7 @@ namespace Win32Window {
 		}
 		ShowWindow(m_Window, SW_SHOW);
 		m_Window_Is_Open = true;
-		NEOLOG_INFO("Created Window -> {}", (void*)m_Window);
+		NEOLOG_INFO("Created Window -> 0x%p", (void*)m_Window);
 	}
 
 	void Shutdown() {

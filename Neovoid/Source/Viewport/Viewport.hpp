@@ -5,7 +5,7 @@
 #include "Window/Window.hpp"
 using namespace DirectX;
 
-struct Viewport {
+class Viewport {
 private:
 	D3D11_VIEWPORT Viewport_Frame = {};
 	int Viewport_Index = 0;
@@ -23,6 +23,7 @@ private:
 	XMMATRIX Perspective_Matrix = XMMatrixPerspectiveFovLH(Fov, Aspect_Ratio, Near_Plane, Far_Plane); // Projection Matrix
 	XMMATRIX Orthographic_Matrix = XMMatrixOrthographicLH(Orthographic_Width, Orthographic_Height, Near_Plane, Far_Plane); // Projection Matrix
 public:
+	Viewport() = default;
 	Viewport(int viewport_index, Vector2 positon, Vector2 size);
 	void Update();
 	void SetOrthographic(bool state);

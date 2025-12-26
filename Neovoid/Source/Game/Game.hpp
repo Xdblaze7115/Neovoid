@@ -1,5 +1,5 @@
 #pragma once
-#include "Player/Player.hpp"
+#include "Nodes/Player/Player.hpp"
 
 namespace Game {
 	void Initialize();

@@ -4,14 +4,14 @@ namespace ViewportManager {
 	std::vector<Viewport> Viewports;
 
 	void Initialize() {
-		Vector2 window_size = Window::GetSize();
-		Viewports.clear();
-		Viewports.emplace_back(0, Vector2(0, 0), window_size);
+		//Vector2 window_size = Window::GetSize();
+		//Viewports.clear();
+		//Viewports.emplace_back(0, Vector2(0, 0), window_size);
 	}
 
 	void Update() {
 		for (Viewport& viewport : Viewports) {
-			viewport.Update();
+			//viewport.Update();
 		}
 	}
 

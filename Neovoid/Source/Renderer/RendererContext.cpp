@@ -52,9 +52,9 @@ namespace RendererContext {
 			NEOLOG_ERROR("Failed to create DirectX 11 device and swap chain");
 			return;
 		}
-		NEOLOG_INFO("Created Device -> {}", (void*)m_Device.GetAddressOf());
-		NEOLOG_INFO("Created Swap Chain -> {}", (void*)m_SwapChain.GetAddressOf());
-		NEOLOG_INFO("Created Device Context -> {}", (void*)m_DeviceContext.GetAddressOf());
+		NEOLOG_INFO("Created Device -> 0x%p", (void*)m_Device.GetAddressOf());
+		NEOLOG_INFO("Created Swap Chain -> 0x%p", (void*)m_SwapChain.GetAddressOf());
+		NEOLOG_INFO("Created Device Context -> 0x%p", (void*)m_DeviceContext.GetAddressOf());
 
 		Microsoft::WRL::ComPtr<ID3D11Texture2D> back_buffer = nullptr;
 		hr = m_SwapChain->GetBuffer(0, IID_PPV_ARGS(back_buffer.GetAddressOf()));
@@ -62,7 +62,7 @@ namespace RendererContext {
 			NEOLOG_ERROR("Failed to get back buffer");
 			return;
 		}
-		NEOLOG_INFO("Found Back Buffer -> {}", (void*)back_buffer.GetAddressOf());
+		NEOLOG_INFO("Found Back Buffer -> 0x%p", (void*)back_buffer.GetAddressOf());
 
 		hr = m_Device->CreateRenderTargetView(back_buffer.Get(), nullptr, m_RenderTargetView.GetAddressOf());
 		back_buffer.Reset();
@@ -70,7 +70,7 @@ namespace RendererContext {
 			NEOLOG_ERROR("Failed to create render target view");
 			return;
 		}
-		NEOLOG_INFO("Created Render Target View -> {}", (void*)m_RenderTargetView.GetAddressOf());
+		NEOLOG_INFO("Created Render Target View -> 0x%p", (void*)m_RenderTargetView.GetAddressOf());
 
 		D3D11_DEPTH_STENCIL_DESC depth_stencil_state_desc = {};
 		depth_stencil_state_desc.DepthEnable = TRUE;
@@ -80,7 +80,7 @@ namespace RendererContext {
 
 		m_Device->CreateDepthStencilState(&depth_stencil_state_desc, &m_DepthStencilState);
 		m_DeviceContext->OMSetDepthStencilState(m_DepthStencilState.Get(), 1u);
-		NEOLOG_INFO("Created Depth Stencil State -> {}", (void*)m_DepthStencilState.GetAddressOf());
+		NEOLOG_INFO("Created Depth Stencil State -> 0x%p", (void*)m_DepthStencilState.GetAddressOf());
 
 		Microsoft::WRL::ComPtr<ID3D11Texture2D> depth_texture;
 		D3D11_TEXTURE2D_DESC depth_texture_desc = {};
@@ -105,7 +105,7 @@ namespace RendererContext {
 			NEOLOG_ERROR("Failed to create depth stencil view");
 			return;
 		}
-		NEOLOG_INFO("Created Depth Stencil View -> {}", (void*)m_DepthStencilView.GetAddressOf());
+		NEOLOG_INFO("Created Depth Stencil View -> 0x%p", (void*)m_DepthStencilView.GetAddressOf());
 
 		D3D11_RASTERIZER_DESC rasterizer_desc;
 		rasterizer_desc.AntialiasedLineEnable = FALSE;
@@ -124,7 +124,7 @@ namespace RendererContext {
 			NEOLOG_ERROR("Failed to create rasterizer state");
 			return;
 		}
-		NEOLOG_INFO("Created Rasterizer State -> {}", (void*)m_RasterizerState.GetAddressOf());
+		NEOLOG_INFO("Created Rasterizer State -> 0x%p", (void*)m_RasterizerState.GetAddressOf());
 
 		float blendFactor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
 		D3D11_BLEND_DESC blend_desc = {};
@@ -141,7 +141,7 @@ namespace RendererContext {
 			NEOLOG_ERROR("Failed to create blend state");
 			return;
 		}
-		NEOLOG_INFO("Created Blend State -> {}", (void*)m_BlendState.GetAddressOf());
+		NEOLOG_INFO("Created Blend State -> 0x%p", (void*)m_BlendState.GetAddressOf());
 		m_DeviceContext->OMSetBlendState(m_BlendState.Get(), blendFactor, 0xFFFFFFFF);
 
 		m_DeviceContext->OMSetRenderTargets(1u, m_RenderTargetView.GetAddressOf(), m_DepthStencilView.Get());

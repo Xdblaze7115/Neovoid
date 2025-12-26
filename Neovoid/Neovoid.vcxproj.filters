@@ -117,19 +117,19 @@
     <ClInclude Include="Source\AssetManager\AssetManager.hpp">
       <Filter>Source\AssetManager</Filter>
     </ClInclude>
-    <ClInclude Include="Source\AssetManager\Mesh.hpp">
+    <ClInclude Include="Source\Nodes\Mesh\Mesh.hpp">
       <Filter>Source\AssetManager</Filter>
     </ClInclude>
-    <ClInclude Include="Source\AssetManager\TextureResource.hpp">
+    <ClInclude Include="Source\Nodes\Texture\TextureResource.hpp">
       <Filter>Source\AssetManager</Filter>
     </ClInclude>
     <ClInclude Include="Source\Backend\Backend.hpp">
       <Filter>Source\Backend</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Camera\Camera.hpp">
+    <ClInclude Include="Source\Nodes\Camera\Camera.hpp">
       <Filter>Source\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Camera\Frustum.hpp">
+    <ClInclude Include="Source\Nodes\Camera\Frustum.hpp">
       <Filter>Source\Camera</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core.hpp">
@@ -168,7 +168,7 @@
     <ClInclude Include="Source\Platform\Windows\WindowsInput.hpp">
       <Filter>Source\Platform\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Player\Player.hpp">
+    <ClInclude Include="Source\Nodes\Player\Player.hpp">
       <Filter>Source\Player</Filter>
     </ClInclude>
     <ClInclude Include="Source\Renderer\Bindables\Bindable.hpp">
@@ -1799,24 +1799,28 @@
     </ClInclude>
     <ClInclude Include="Source\Math\Vertex.hpp" />
     <ClInclude Include="Vendor\assimp\include\assimp\config.h" />
+    <ClInclude Include="Source\Nodes\Material\Material.hpp" />
+    <ClInclude Include="Source\Nodes\Light\Light.hpp" />
+    <ClInclude Include="Source\Nodes\Skybox\Skybox.hpp" />
+    <ClInclude Include="Source\Parsers\MeshParser.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\AssetManager\AssetManager.cpp">
       <Filter>Source\AssetManager</Filter>
     </ClCompile>
-    <ClCompile Include="Source\AssetManager\Mesh.cpp">
+    <ClCompile Include="Source\Nodes\Mesh\Mesh.cpp">
       <Filter>Source\AssetManager</Filter>
     </ClCompile>
-    <ClCompile Include="Source\AssetManager\TextureResource.cpp">
+    <ClCompile Include="Source\Nodes\Texture\TextureResource.cpp">
       <Filter>Source\AssetManager</Filter>
     </ClCompile>
     <ClCompile Include="Source\Backend\Backend.cpp">
       <Filter>Source\Backend</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Camera\Camera.cpp">
+    <ClCompile Include="Source\Nodes\Camera\Camera.cpp">
       <Filter>Source\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Camera\Frustum.cpp">
+    <ClCompile Include="Source\Nodes\Camera\Frustum.cpp">
       <Filter>Source\Camera</Filter>
     </ClCompile>
     <ClCompile Include="Source\Game\Game.cpp">
@@ -1840,7 +1844,7 @@
     <ClCompile Include="Source\Platform\Windows\WindowsInput.cpp">
       <Filter>Source\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Player\Player.cpp">
+    <ClCompile Include="Source\Nodes\Player\Player.cpp">
       <Filter>Source\Player</Filter>
     </ClCompile>
     <ClCompile Include="Source\Renderer\Bindables\Buffer.cpp">
@@ -1888,6 +1892,10 @@
     <ClCompile Include="Vendor\glm\glm\glm.cppm">
       <Filter>Vendor\glm\glm</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Nodes\Material\Material.cpp" />
+    <ClCompile Include="Source\Nodes\Light\Light.cpp" />
+    <ClCompile Include="Source\Nodes\Skybox\Skybox.cpp" />
+    <ClCompile Include="Source\Parsers\MeshParser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Meshes\teapot.obj">
@@ -1912,6 +1920,7 @@
   <ItemGroup>
     <FxCompile Include="Source\Shaders\PixelShader.hlsl" />
     <FxCompile Include="Source\Shaders\VertexShader.hlsl" />
+    <FxCompile Include="Source\Shaders\SkyboxShader.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="Vendor\assimp\lib\assimp-vc143-mt.lib" />

@@ -14,15 +14,15 @@ void VertexBuffer::Unbind() noexcept {
 }
 
 // Index Buffer //
-IndexBuffer::IndexBuffer(std::vector<uint32_t>& indices) {
+IndexBuffer::IndexBuffer(std::vector<unsigned int>& indices) {
 	m_Count = (UINT)indices.size();
 	D3D11_BUFFER_DESC index_buffer_desc = {};
 	index_buffer_desc.BindFlags = D3D11_BIND_INDEX_BUFFER;
 	index_buffer_desc.Usage = D3D11_USAGE_DEFAULT;
 	index_buffer_desc.CPUAccessFlags = 0u;
 	index_buffer_desc.MiscFlags = 0u;
-	index_buffer_desc.ByteWidth = sizeof(uint32_t) * m_Count;
-	index_buffer_desc.StructureByteStride = sizeof(uint32_t);
+	index_buffer_desc.ByteWidth = sizeof(unsigned int) * m_Count;
+	index_buffer_desc.StructureByteStride = sizeof(unsigned int);
 
 	D3D11_SUBRESOURCE_DATA index_sub_data = {};
 	index_sub_data.pSysMem = indices.data();

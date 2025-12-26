@@ -63,4 +63,31 @@ namespace Logging {
 		}
 		std::cout << msg << "\033[0m" << std::endl;
 	}
+
+	void NeoLog(LogLevel level, const char* fmt, ...) {
+		if (!m_Initialized) return;
+
+		std::lock_guard<std::mutex> lock(m_Mutex);
+
+		auto now = std::chrono::system_clock::now();
+		auto time = std::chrono::system_clock::to_time_t(now);
+
+		std::tm tm;
+		localtime_s(&tm, &time);
+
+		char buffer[2048];
+		va_list args;
+		va_start(args, fmt);
+		vsnprintf(buffer, sizeof(buffer), fmt, args);
+		va_end(args);
+
+		std::ostringstream output;
+		output << "[" << std::put_time(&tm, "%H:%M:%S") << "] [" << LevelToString(level) << "] " << buffer;
+		std::string formatted = output.str();
+		PrintToConsole(level, formatted);
+
+		if (m_Log_File.is_open()) {
+			m_Log_File << formatted << std::endl;
+		}
+	}
 }

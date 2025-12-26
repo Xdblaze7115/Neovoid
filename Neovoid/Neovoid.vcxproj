@@ -74,6 +74,9 @@
     <TargetName>Neovoid</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -138,11 +141,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Source\AssetManager\AssetManager.hpp" />
-    <ClInclude Include="Source\AssetManager\Mesh.hpp" />
-    <ClInclude Include="Source\AssetManager\TextureResource.hpp" />
+    <ClInclude Include="Source\Nodes\Light\Light.hpp" />
+    <ClInclude Include="Source\Nodes\Mesh\Mesh.hpp" />
+    <ClInclude Include="Source\Nodes\Texture\TextureResource.hpp" />
     <ClInclude Include="Source\Backend\Backend.hpp" />
-    <ClInclude Include="Source\Camera\Camera.hpp" />
-    <ClInclude Include="Source\Camera\Frustum.hpp" />
+    <ClInclude Include="Source\Nodes\Camera\Camera.hpp" />
+    <ClInclude Include="Source\Nodes\Camera\Frustum.hpp" />
     <ClInclude Include="Source\Core.hpp" />
     <ClInclude Include="Source\Events\ApplicationEvent.hpp" />
     <ClInclude Include="Source\Events\Event.hpp" />
@@ -152,11 +156,14 @@
     <ClInclude Include="Source\Imgui\Imgui.hpp" />
     <ClInclude Include="Source\KeyCodes.hpp" />
     <ClInclude Include="Source\Logging\Logging.hpp" />
+    <ClInclude Include="Source\Nodes\Material\Material.hpp" />
     <ClInclude Include="Source\Math\Vector.hpp" />
     <ClInclude Include="Source\Math\Vertex.hpp" />
+    <ClInclude Include="Source\Nodes\Skybox\Skybox.hpp" />
+    <ClInclude Include="Source\Parsers\MeshParser.hpp" />
     <ClInclude Include="Source\Platform\Windows\Win32Window.hpp" />
     <ClInclude Include="Source\Platform\Windows\WindowsInput.hpp" />
-    <ClInclude Include="Source\Player\Player.hpp" />
+    <ClInclude Include="Source\Nodes\Player\Player.hpp" />
     <ClInclude Include="Source\Renderer\Bindables\Bindable.hpp" />
     <ClInclude Include="Source\Renderer\Bindables\Buffer.hpp" />
     <ClInclude Include="Source\Renderer\Bindables\ConstantBuffer.hpp" />
@@ -703,19 +710,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\AssetManager\AssetManager.cpp" />
-    <ClCompile Include="Source\AssetManager\Mesh.cpp" />
-    <ClCompile Include="Source\AssetManager\TextureResource.cpp" />
+    <ClCompile Include="Source\Nodes\Light\Light.cpp" />
+    <ClCompile Include="Source\Nodes\Mesh\Mesh.cpp" />
+    <ClCompile Include="Source\Nodes\Texture\TextureResource.cpp" />
     <ClCompile Include="Source\Backend\Backend.cpp" />
-    <ClCompile Include="Source\Camera\Camera.cpp" />
-    <ClCompile Include="Source\Camera\Frustum.cpp" />
+    <ClCompile Include="Source\Nodes\Camera\Camera.cpp" />
+    <ClCompile Include="Source\Nodes\Camera\Frustum.cpp" />
     <ClCompile Include="Source\Game\Game.cpp" />
     <ClCompile Include="Source\Imgui\Imgui.cpp" />
     <ClCompile Include="Source\Logging\Logging.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Nodes\Material\Material.cpp" />
     <ClCompile Include="Source\Math\Vector.cpp" />
+    <ClCompile Include="Source\Nodes\Skybox\Skybox.cpp" />
+    <ClCompile Include="Source\Parsers\MeshParser.cpp" />
     <ClCompile Include="Source\Platform\Windows\Win32Window.cpp" />
     <ClCompile Include="Source\Platform\Windows\WindowsInput.cpp" />
-    <ClCompile Include="Source\Player\Player.cpp" />
+    <ClCompile Include="Source\Nodes\Player\Player.cpp" />
     <ClCompile Include="Source\Renderer\Bindables\Buffer.cpp" />
     <ClCompile Include="Source\Renderer\Bindables\InputLayout.cpp" />
     <ClCompile Include="Source\Renderer\Bindables\Shader.cpp" />
@@ -760,11 +771,26 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
       <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Source\Shaders\SkyboxShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
     </FxCompile>
     <FxCompile Include="Source\Shaders\VertexShader.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
       <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
     </FxCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
 #pragma once
-#include "AssetManager/TextureResource.hpp"
+#include "Nodes/Texture/TextureResource.hpp"
 #include "Bindable.hpp"
 
 class Texture : public Bindable {

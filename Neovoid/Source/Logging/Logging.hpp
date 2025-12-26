@@ -20,27 +20,7 @@ namespace Logging {
 	void Shutdown();
 	const char* LevelToString(LogLevel level);
 	void PrintToConsole(LogLevel level, std::string msg);
-
-	template<typename... Args>
-	inline void NeoLog(LogLevel level, const char* fmt, Args&&... args) {
-		if (!m_Initialized) return;
-
-		std::lock_guard<std::mutex> lock(m_Mutex);
-
-		auto now = std::chrono::system_clock::now();
-		auto time = std::chrono::system_clock::to_time_t(now);
-
-		std::tm tm;
-		localtime_s(&tm, &time);
-
-		std::string message = std::vformat(fmt, std::make_format_args(args...));
-		std::string formatted = std::format("[{:02}:{:02}:{:02}] [{}] {}", tm.tm_hour, tm.tm_min, tm.tm_sec, LevelToString(level), message);
-		PrintToConsole(level, formatted);
-
-		if (m_Log_File.is_open()) {
-			m_Log_File << formatted << std::endl;
-		}
-	}
+	void NeoLog(LogLevel level, const char* fmt, ...);
 };
 
 #define NEOLOG_INFO(fmt, ...)     Logging::NeoLog(LogLevel::Info, fmt, __VA_ARGS__)

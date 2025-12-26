@@ -1,5 +1,5 @@
 #pragma once
-#include "Camera/Camera.hpp"
+#include "Nodes/Camera/Camera.hpp"
 #include "Viewport/Viewport.hpp"
 #include "Renderer/RendererContext.hpp"
 #include "Renderer/Bindables/Buffer.hpp"
